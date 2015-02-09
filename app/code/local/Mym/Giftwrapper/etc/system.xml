@@ -1,0 +1,33 @@
+<config>
+    <sections>
+        <checkout translate="label" module="checkout">
+            <groups>
+                <giftwrapper translate="label" module="giftwrapper">
+                    <label>Gift Wrapper</label>
+                    <sort_order>100</sort_order>
+                    <show_in_default>1</show_in_default>
+                    <show_in_website>1</show_in_website>
+                    <fields>
+                        <gift_wrapper_charge translate="label">
+                            <label>Gift wrapper charge</label>
+                            <frontend_type>text</frontend_type>
+                            <sort_order>1</sort_order>
+                            <show_in_default>1</show_in_default>
+                            <show_in_website>1</show_in_website>
+                            <show_in_store>0</show_in_store>
+                        </gift_wrapper_charge>
+						<gift_wrapper_text translate="label">
+                            <label>Gift wrapper message</label>
+                            <frontend_type>text</frontend_type>
+                            <sort_order>1</sort_order>
+                            <show_in_default>1</show_in_default>
+                            <show_in_website>1</show_in_website>
+                            <show_in_store>0</show_in_store>
+                        </gift_wrapper_text>
+                      
+                    </fields>
+                </giftwrapper>
+            </groups>
+        </checkout>
+    </sections>
+</config>

@@ -1,0 +1,56 @@
+<?php
+/**
+ * Magento
+ *
+ * NOTICE OF LICENSE
+ *
+ * This source file is subject to the Academic Free License (AFL 3.0)
+ * that is bundled with this package in the file LICENSE_AFL.txt.
+ * It is also available through the world-wide-web at this URL:
+ * http://opensource.org/licenses/afl-3.0.php
+ * If you did not receive a copy of the license and are unable to
+ * obtain it through the world-wide-web, please send an email
+ * to license@magentocommerce.com so we can send you a copy immediately.
+ *
+ * DISCLAIMER
+ *
+ * Do not edit or add to this file if you wish to upgrade Magento to newer
+ * versions in the future. If you wish to customize Magento for your
+ * needs please refer to http://www.magentocommerce.com for more information.
+ *
+ * @category    design
+ * @package     rwd_default
+ * @copyright   Copyright (c) 2014 Magento Inc. (http://www.magentocommerce.com)
+ * @license     http://opensource.org/licenses/afl-3.0.php  Academic Free License (AFL 3.0)
+ */
+?>
+<form id="giftwrapper-form" action="<?php echo $this->getUrl('giftwrapper/index/Post') ?>" method="post">
+    <div class="giftcard">
+        <h2><?php echo $this->__('Gift Wrapper') ?></h2>
+        <div class="giftwrapper-form">            
+            
+            <div class="field-wrapper">
+				<input type="checkbox" name="giftwrap_charge" id="giftwrap_charge" value="1" class="checkbox">
+				<label for="giftwrap_charge">
+				<?php
+				$storeId = Mage::app()->getStore()->getId();                
+				$giftwrapper_charge = Mage::getStoreConfig('checkout/giftwrapper/gift_wrapper_charge', $storeId);	
+				$giftwrapper_msg = Mage::getStoreConfig('checkout/giftwrapper/gift_wrapper_text', $storeId);	
+				$formattedPrice = '<b>'.Mage::helper('core')->currency($giftwrapper_charge, true, false).'</b>';
+				$final_giftwrap_text = str_replace ('#price#',$formattedPrice,$giftwrapper_msg);
+				echo $final_giftwrap_text;
+				?>
+				</label>
+				
+                <div class="button-wrapper">
+                    <button type="button" title="<?php echo $this->__('Apply') ?>" class="button2" onclick="giftwrapperForm.submit(false)" value="<?php echo $this->__('Apply') ?>"><span><span><?php echo $this->__('Apply') ?></span></span></button>                    
+                </div>
+            </div>
+        </div>
+    </div>
+</form>
+<script type="text/javascript">
+//<![CDATA[
+var giftwrapperForm = new VarienForm('giftwrapper-form');
+//]]>
+</script>

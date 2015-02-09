@@ -1,0 +1,31 @@
+<?xml version="1.0"?>
+<layout version="0.1.0">
+    <adminhtml_sales_order_view>
+        <reference name="order_totals">
+            <block type="adminhtml/sales_order_totals_item" name="giftwrapper" template="giftwrapper/sales/order/total.phtml">
+            </block>
+        </reference>
+    </adminhtml_sales_order_view>
+
+    <adminhtml_sales_order_invoice_new>
+        <reference name="invoice_totals">
+            <block type="adminhtml/sales_order_totals_item" name="giftwrapper" template="giftwrapper/sales/order/total.phtml">
+            </block>
+        </reference>
+    </adminhtml_sales_order_invoice_new>
+
+    <adminhtml_sales_order_invoice_updateqty>
+        <reference name="invoice_totals">
+            <block type="adminhtml/sales_order_totals_item" name="giftwrapper" template="giftwrapper/sales/order/total.phtml">
+            </block>
+        </reference>
+    </adminhtml_sales_order_invoice_updateqty>
+
+    <adminhtml_sales_order_invoice_view>
+        <reference name="invoice_totals">
+            <block type="adminhtml/sales_order_totals_item" name="giftwrapper" template="giftwrapper/sales/order/total.phtml">
+            </block>
+        </reference>
+    </adminhtml_sales_order_invoice_view>
+
+</layout>

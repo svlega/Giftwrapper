@@ -1,0 +1,9 @@
+<?php $this->setPriceDataObject($this->getSource()) ?>
+<?php if ((float) $this->getSource()->getgiftwrapperCharge()): ?>
+    <tr>
+        <td class="label"><?php echo Mage::helper('giftwrapper')->__('Giftwrapper Charge') ?></td>
+        <td>
+            <?php echo $this->displayPrices($this->getSource()->getBasegiftwrapperCharge(), $this->getSource()->getgiftwrapperCharge()); ?>
+        </td>
+    </tr>
+<?php endif; ?>
